@@ -49,3 +49,8 @@ Another example of how I utilized vagrant can be found in another github repo [v
 
 Example Image:
 ![Openstack Setup](https://github.com/aelmadho/vagrant-openstack/blob/master/docs/openstack_vagrant_vbox.jpg)
+
+
+### Notes:
+
+Utilizing systemd as part of recent CentOS to utilize the concept of deploying applciations as services, and ensure consistency and idompotency.
