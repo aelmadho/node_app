@@ -1,0 +1,13 @@
+---
+# tasks file for app
+- name: Update app service file
+  template: src=app.service  dest=/lib/systemd/system/app.service owner=root mode=0644
+  notify:
+    - 'Reload systemd'
+    - 'Restart app'
+
+# since systemd/systemctl is not yet available as an ansible module, lets use shell
+# module until it becomes available.
+- name: Enable application
+  shell: systemctl enable app.service
+

@@ -1,0 +1,13 @@
+- hosts: all
+  pre_tasks:
+    - name: Install Redhat EPEL Repository
+      yum: name='epel-release' state=installed
+
+    - name: Install Node and NPM
+      yum: name={{ item }} state=installed
+      with_items:
+        - 'nodejs'
+        - 'npm'
+
+  roles:
+    - app
